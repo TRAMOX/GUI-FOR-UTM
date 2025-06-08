@@ -1,0 +1,88 @@
+2025-06-07 08:38:56,035 - INFO - GUI components initialized successfully
+2025-06-07 08:38:56,036 - INFO - Background threads started
+2025-06-07 08:38:56,036 - INFO - Starting UTM Controller Application
+2025-06-07 08:43:16,369 - INFO - GUI components initialized successfully
+2025-06-07 08:43:16,370 - INFO - Background threads started
+2025-06-07 08:43:16,370 - INFO - Starting UTM Controller Application
+2025-06-07 08:43:52,896 - INFO - GUI components initialized successfully
+2025-06-07 08:43:52,897 - INFO - Background threads started
+2025-06-07 08:43:52,897 - INFO - Starting UTM Controller Application
+2025-06-07 08:45:31,548 - INFO - GUI components initialized successfully
+2025-06-07 08:45:31,555 - INFO - Background threads started
+2025-06-07 08:45:31,556 - INFO - Starting UTM Controller Application
+2025-06-07 08:45:46,664 - INFO - GUI components initialized successfully
+2025-06-07 08:45:46,671 - INFO - Background threads started
+2025-06-07 08:45:46,672 - INFO - Starting UTM Controller Application
+2025-06-07 08:47:08,983 - INFO - GUI components initialized successfully
+2025-06-07 08:47:08,984 - INFO - Background threads started
+2025-06-07 08:47:08,984 - INFO - Starting UTM Controller Application
+2025-06-07 08:49:02,073 - INFO - GUI components initialized successfully
+2025-06-07 08:49:02,075 - INFO - Background threads started
+2025-06-07 08:49:02,075 - INFO - Starting UTM Controller Application
+2025-06-07 08:51:16,826 - INFO - GUI components initialized successfully
+2025-06-07 08:51:16,827 - INFO - Background threads started
+2025-06-07 08:51:16,827 - INFO - Starting UTM Controller Application
+2025-06-07 10:22:45,363 - INFO - GUI components initialized successfully
+2025-06-07 10:22:45,364 - INFO - Background threads started
+2025-06-07 10:22:45,365 - INFO - Starting UTM Controller Application
+2025-06-07 10:24:30,349 - INFO - GUI components initialized successfully
+2025-06-07 10:24:30,351 - INFO - Background threads started
+2025-06-07 10:24:30,351 - INFO - Starting UTM Controller Application
+2025-06-07 16:06:04,446 - INFO - GUI components initialized successfully
+2025-06-07 16:06:04,451 - INFO - Background threads started
+2025-06-07 16:06:04,452 - INFO - Starting UTM Controller Application
+2025-06-07 16:06:17,140 - INFO - Cleared plot data
+2025-06-07 16:06:38,029 - INFO - Set motor speed to 36 RPM
+2025-06-07 16:06:43,469 - INFO - Set motor speed to 50 RPM
+2025-06-07 16:06:54,959 - INFO - Started plotting for Plastic TENSILE test
+2025-06-07 16:07:00,812 - INFO - Stopped plotting
+2025-06-07 16:07:03,632 - INFO - Shutting down UTM Controller
+2025-06-07 16:39:09,166 - INFO - GUI components initialized successfully
+2025-06-07 16:39:09,168 - INFO - Background threads started
+2025-06-07 16:39:09,168 - INFO - Starting UTM Controller Application
+2025-06-07 16:39:13,939 - INFO - Shutting down UTM Controller
+2025-06-07 16:39:31,915 - INFO - GUI components initialized successfully
+2025-06-07 16:39:31,926 - INFO - Background threads started
+2025-06-07 16:39:31,927 - INFO - Starting UTM Controller Application
+2025-06-07 16:39:39,358 - INFO - Started plotting for Steel TENSILE test
+2025-06-07 16:40:25,625 - INFO - Shutting down UTM Controller
+2025-06-07 16:40:25,626 - INFO - Stopped plotting
+2025-06-07 16:42:03,961 - INFO - GUI components initialized successfully
+2025-06-07 16:42:03,963 - INFO - Background threads started
+2025-06-07 16:42:03,963 - INFO - Starting UTM Controller Application
+2025-06-07 16:42:16,919 - INFO - Shutting down UTM Controller
+2025-06-07 16:44:52,716 - INFO - GUI components initialized successfully
+2025-06-07 16:44:52,720 - INFO - Background threads started
+2025-06-07 16:44:52,720 - INFO - Starting UTM Controller Application
+2025-06-07 16:46:04,208 - INFO - Started plotting for Steel CYCLIC test
+2025-06-07 16:46:37,712 - INFO - Stopped plotting
+2025-06-07 16:46:43,107 - INFO - Cleared plot data
+2025-06-07 16:47:20,444 - INFO - Shutting down UTM Controller
+2025-06-07 16:49:50,357 - INFO - GUI components initialized successfully
+2025-06-07 16:49:50,359 - INFO - Background threads started
+2025-06-07 16:49:50,360 - INFO - Starting UTM Controller Application
+2025-06-07 16:49:52,224 - INFO - Shutting down UTM Controller
+2025-06-07 18:17:30,766 - INFO - GUI components initialized successfully
+2025-06-07 18:17:30,768 - INFO - Background threads started
+2025-06-07 18:17:30,769 - INFO - Starting UTM Controller Application
+2025-06-07 18:17:31,887 - INFO - Shutting down UTM Controller
+2025-06-07 22:30:58,737 - INFO - GUI components initialized successfully
+2025-06-07 22:30:58,742 - INFO - Background threads started
+2025-06-07 22:30:58,743 - INFO - Starting UTM Controller Application
+2025-06-07 22:31:11,922 - INFO - Requested current motor speed
+2025-06-07 22:31:17,819 - INFO - Set motor speed to 10 RPM
+2025-06-07 22:31:29,245 - INFO - Started plotting for Steel TENSILE test
+2025-06-07 22:31:33,108 - INFO - Stopped plotting
+2025-06-07 22:31:35,637 - INFO - Cleared plot data
+2025-06-07 22:31:43,111 - INFO - Refreshed COM ports: []
+2025-06-07 22:32:06,838 - INFO - Shutting down UTM Controller
+2025-06-08 11:10:19,940 - INFO - GUI components initialized successfully
+2025-06-08 11:10:19,942 - INFO - Background threads started
+2025-06-08 11:10:19,943 - INFO - Starting UTM Controller Application
+2025-06-08 11:10:51,938 - INFO - Started plotting for Steel TENSILE test
+2025-06-08 11:10:55,727 - INFO - Shutting down UTM Controller
+2025-06-08 11:10:55,728 - INFO - Stopped plotting
+2025-06-08 12:37:13,773 - INFO - GUI components initialized successfully
+2025-06-08 12:37:13,775 - INFO - Background threads started
+2025-06-08 12:37:13,775 - INFO - Starting UTM Controller Application
+2025-06-08 12:42:59,763 - INFO - Set motor speed to 25 RPM

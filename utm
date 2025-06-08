@@ -1,0 +1,28 @@
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["cairo", "ffmpeg-full", "freetype", "ghostscript", "gobject-introspection", "gtk3", "libxcrypt", "pkg-config", "qhull", "tcl", "tk", "xsimd"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "UTM Controller"
+
+[[workflows.workflow]]
+name = "UTM Controller"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "DISPLAY=:0 python main.py"
+
+[deployment]
+run = ["sh", "-c", "DISPLAY=:0 python main.py"]
