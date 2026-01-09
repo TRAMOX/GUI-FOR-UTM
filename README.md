@@ -4,10 +4,10 @@
 This project is a fully modular and advanced **Python desktop GUI** for controlling a **Universal Testing Machine (UTM)** powered by Arduino. It features:
 
 - 🔄 Bi-directional communication with Arduino via serial
-- 📊 Real-time plotting of force, displacement, and stress-strain curves
-- 🧠 Material property calculation (Young’s Modulus, Yield Strength, etc.)
-- 🎛️ Machine control via GUI and PCB hardware buttons
-- 🧩 Clean modular architecture for easy team collaboration and feature updates
+- Real-time plotting of force, displacement, and stress-strain curves
+- Material property calculation (Young’s Modulus, Yield Strength, etc.)
+- Machine control via GUI and PCB hardware buttons
+- Clean modular architecture for easy team collaboration and feature updates
 
 ---
 
