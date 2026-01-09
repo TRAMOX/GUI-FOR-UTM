@@ -1,8 +1,3 @@
-"""
-UTM Controller - Main application controller class
-Handles GUI creation, event management, and coordination between components
-"""
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 import threading
