@@ -3,23 +3,13 @@
 
 ## 📅 Supported Versions
 
-We will release security updates for the following versions:
+We will release security updates for the following versions: v1.0
 
-| Version | Supported          |
-|---------|--------------------|
-| 1.x     | ✅ Yes              |
-| < 1.0   | ❌ No               |
-
----
 
 ## 🐛 Reporting a Vulnerability
 
 If you discover a security vulnerability in this project, **please report it responsibly**.
 
-### 📧 Contact
-
-- Email: [your-email@example.com]
-- GitHub Issues: Please **do not** submit vulnerabilities via public issues. Use email or a private message instead.
 
 ### 🔒 Guidelines
 
@@ -46,7 +36,7 @@ This project does **not** cover:
 
 ---
 
-## 🙏 Responsible Disclosure
+##  Responsible Disclosure
 
 We appreciate contributions from the security community and will verify, respond to, and address all reported issues promptly.
 
