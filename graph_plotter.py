@@ -1,8 +1,3 @@
-"""
-Graph Plotter - Advanced plotting for material testing analysis
-Provides real-time plotting of stress-strain curves and material properties calculation
-"""
-
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 import matplotlib.pyplot as plt
@@ -19,7 +14,6 @@ import time
 from datetime import datetime
 
 class MaterialTestPlotter:
-    """Advanced plotting component for material testing analysis"""
     
     def __init__(self, parent, controller):
         self.parent = parent
@@ -55,7 +49,6 @@ class MaterialTestPlotter:
         self.setup_plotter_gui()
         
     def setup_plotter_gui(self):
-        """Setup the plotting interface"""
         # Create notebook for different tabs
         self.notebook = ttk.Notebook(self.parent)
         self.notebook.pack(fill='both', expand=True, padx=5, pady=5)
@@ -70,7 +63,6 @@ class MaterialTestPlotter:
         self.create_properties_tab()
         
     def create_realtime_tab(self):
-        """Create real-time plotting tab"""
         self.realtime_frame = ttk.Frame(self.notebook)
         self.notebook.add(self.realtime_frame, text="Real-time Plots")
         
@@ -133,7 +125,6 @@ class MaterialTestPlotter:
         self.create_plot_figure()
         
     def create_plot_figure(self):
-        """Create the matplotlib figure with subplots"""
         # Create figure with subplots
         self.fig = Figure(figsize=(12, 8), dpi=100)
         
@@ -183,7 +174,6 @@ class MaterialTestPlotter:
         self.toolbar.update()
         
     def create_analysis_tab(self):
-        """Create analysis results tab"""
         self.analysis_frame = ttk.Frame(self.notebook)
         self.notebook.add(self.analysis_frame, text="Analysis Results")
         
@@ -218,7 +208,6 @@ class MaterialTestPlotter:
                   command=self.generate_test_report).pack(side='left', padx=5)
         
     def create_properties_tab(self):
-        """Create material properties reference tab"""
         self.properties_frame = ttk.Frame(self.notebook)
         self.notebook.add(self.properties_frame, text="Material Database")
         
@@ -240,7 +229,6 @@ class MaterialTestPlotter:
         self.populate_material_database()
         
     def populate_material_database(self):
-        """Populate the material database with reference values"""
         materials = [
             ("Steel (Low Carbon)", "200", "250", "400"),
             ("Steel (High Carbon)", "200", "380", "600"),
@@ -261,7 +249,6 @@ class MaterialTestPlotter:
             self.props_tree.insert('', 'end', values=material)
         
     def start_plotting(self):
-        """Start real-time plotting"""
         if not self.is_plotting:
             self.is_plotting = True
             self.start_plot_btn.config(state='disabled')
@@ -280,7 +267,6 @@ class MaterialTestPlotter:
             logging.info(f"Started plotting for {self.material_type} {self.test_mode} test")
         
     def stop_plotting(self):
-        """Stop real-time plotting"""
         if self.is_plotting:
             self.is_plotting = False
             self.start_plot_btn.config(state='normal')
@@ -356,7 +342,6 @@ class MaterialTestPlotter:
                 break
         
     def _update_plots(self):
-        """Update all plots with current data"""
         try:
             if not self.time_data:
                 return
@@ -444,7 +429,6 @@ class MaterialTestPlotter:
             messagebox.showerror("Calculation Error", f"Error calculating properties: {e}")
     
     def update_results_display(self):
-        """Update the results display with calculated properties"""
         # Clear existing results
         for item in self.results_tree.get_children():
             self.results_tree.delete(item)
@@ -467,7 +451,6 @@ class MaterialTestPlotter:
             self.results_tree.insert('', 'end', values=result)
     
     def export_analysis_results(self):
-        """Export analysis results to CSV file"""
         try:
             filename = filedialog.asksaveasfilename(
                 defaultextension=".csv",
@@ -505,7 +488,6 @@ class MaterialTestPlotter:
             messagebox.showerror("Export Error", f"Error exporting results: {e}")
     
     def generate_test_report(self):
-        """Generate a comprehensive test report"""
         try:
             filename = filedialog.asksaveasfilename(
                 defaultextension=".txt",
