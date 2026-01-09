@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-"""
-Universal Testing Machine (UTM) Control Application
-Advanced Python GUI for Arduino-based UTM control with bidirectional communication
-"""
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
