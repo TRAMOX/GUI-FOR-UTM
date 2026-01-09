@@ -1,11 +1,4 @@
-"""
-Configuration settings for the UTM Controller application
-Contains all configurable parameters and constants
-"""
-
 class UTMConfig:
-    """Configuration class for UTM Controller"""
-    
     # Serial communication settings
     DEFAULT_BAUDRATE = 9600
     SERIAL_TIMEOUT = 1
