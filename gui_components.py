@@ -1,15 +1,9 @@
-"""
-GUI Components - Individual UI components for the UTM Controller
-Modular GUI elements for better organization and maintainability
-"""
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 import logging
 import utils
 
 class UTMControlPanel:
-    """Control panel with all machine control buttons"""
     
     def __init__(self, parent, controller):
         self.parent = parent
@@ -18,7 +12,7 @@ class UTMControlPanel:
         self.setup_controls()
     
     def setup_controls(self):
-        """Setup control panel UI elements"""
+        
         # Connection section
         self.create_connection_section()
         
@@ -41,7 +35,7 @@ class UTMControlPanel:
         self.create_speed_controls()
     
     def create_connection_section(self):
-        """Create connection controls"""
+        
         conn_frame = ttk.Frame(self.parent)
         conn_frame.pack(fill='x', pady=5)
         
@@ -78,7 +72,7 @@ class UTMControlPanel:
         self.refresh_ports()
     
     def create_main_controls(self):
-        """Create main control buttons"""
+     
         main_frame = ttk.Frame(self.parent)
         main_frame.pack(fill='x', pady=5)
         
@@ -92,7 +86,7 @@ class UTMControlPanel:
         self.button_refs['T'] = self.turboset_btn
     
     def create_manual_controls(self):
-        """Create manual control buttons"""
+       
         manual_frame = ttk.Frame(self.parent)
         manual_frame.pack(fill='x', pady=5)
         
@@ -131,7 +125,7 @@ class UTMControlPanel:
         self.button_refs['4'] = self.zero_btn
     
     def refresh_ports(self):
-        """Refresh available COM ports"""
+        
         try:
             ports = utils.get_available_ports()
             port_names = [port['device'] for port in ports]
@@ -145,7 +139,7 @@ class UTMControlPanel:
             messagebox.showerror("Error", f"Failed to refresh COM ports:\n{e}")
     
     def connect_clicked(self):
-        """Handle connect button click"""
+        
         try:
             port = self.port_var.get()
             if not port:
@@ -161,7 +155,7 @@ class UTMControlPanel:
             logging.error(f"Error in connect clicked: {e}")
     
     def disconnect_clicked(self):
-        """Handle disconnect button click"""
+        
         try:
             self.controller.disconnect_serial()
             self.connect_btn.config(state='normal')
@@ -172,7 +166,7 @@ class UTMControlPanel:
             logging.error(f"Error in disconnect clicked: {e}")
     
     def highlight_button(self, button_code):
-        """Highlight button corresponding to PCB button press"""
+        
         try:
             if button_code in self.button_refs:
                 button = self.button_refs[button_code]
@@ -185,7 +179,7 @@ class UTMControlPanel:
             logging.error(f"Error highlighting button {button_code}: {e}")
     
     def create_speed_controls(self):
-        """Create stepper motor speed control section"""
+       
         speed_frame = ttk.LabelFrame(self.parent, text="Motor Speed Control", padding="5")
         speed_frame.pack(fill='x', pady=5)
         
@@ -238,7 +232,7 @@ class UTMControlPanel:
             btn.pack(side='left', padx=1)
     
     def set_motor_speed(self):
-        """Send set speed command to Arduino"""
+      
         try:
             speed = int(self.speed_var.get())
             if 1 <= speed <= 200:
@@ -254,7 +248,7 @@ class UTMControlPanel:
             logging.error(f"Error setting motor speed: {e}")
     
     def get_motor_speed(self):
-        """Get current motor speed from Arduino"""
+        
         try:
             self.controller.send_custom_command("G")
             logging.info("Requested current motor speed")
@@ -267,11 +261,11 @@ class UTMControlPanel:
         self.set_motor_speed()
     
     def update_current_speed(self, speed):
-        """Update the current speed display"""
+       
         self.current_speed_var.set(f"{speed} RPM")
 
 class StatusPanel:
-    """Status and connection information panel"""
+   
     
     def __init__(self, parent, controller):
         self.parent = parent
@@ -279,7 +273,7 @@ class StatusPanel:
         self.setup_status_display()
     
     def setup_status_display(self):
-        """Setup status display elements"""
+        
         # Connection status
         conn_frame = ttk.Frame(self.parent)
         conn_frame.pack(fill='x', pady=5)
@@ -317,7 +311,7 @@ class StatusPanel:
         scrollbar.pack(side='right', fill='y')
     
     def update_connection_status(self, connected):
-        """Update connection status display"""
+      
         if connected:
             self.conn_status_var.set("Connected")
             self.conn_status_label.config(foreground='green')
@@ -326,7 +320,7 @@ class StatusPanel:
             self.conn_status_label.config(foreground='red')
     
     def update_machine_state(self, state):
-        """Update machine state display"""
+       
         self.machine_state_var.set(state)
         
         # Color code based on state
@@ -344,7 +338,7 @@ class StatusPanel:
         self.machine_state_label.config(foreground=color)
     
     def update_port_list(self, ports):
-        """Update system info with available ports"""
+        
         info_text = "Available COM Ports:\n"
         for port in ports:
             info_text += f"  {port['device']}: {port['description']}\n"
@@ -355,7 +349,7 @@ class StatusPanel:
         self.info_text.config(state='disabled')
 
 class DataPanel:
-    """Real-time data display panel"""
+    
     
     def __init__(self, parent, controller):
         self.parent = parent
@@ -416,15 +410,15 @@ class DataPanel:
         self.update_statistics()
     
     def update_load_display(self, load_value):
-        """Update load/force display"""
+       
         self.load_var.set(f"{load_value:.2f} N")
     
     def update_position_display(self, position_value):
-        """Update position display"""
+      
         self.position_var.set(f"{position_value:.2f} mm")
     
     def toggle_logging(self):
-        """Toggle data logging on/off"""
+       
         current_text = self.log_btn.cget('text')
         if current_text == "Start Logging":
             self.log_btn.config(text="Stop Logging")
@@ -434,7 +428,7 @@ class DataPanel:
             logging.info("Data logging stopped")
     
     def update_statistics(self):
-        """Update data statistics display"""
+        
         stats_text = """Data Statistics:
   Samples Collected: 0
   Max Load: 0.00 N
