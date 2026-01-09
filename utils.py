@@ -1,8 +1,3 @@
-"""
-Utility functions for the UTM Controller application
-Helper functions for common tasks
-"""
-
 import serial.tools.list_ports
 import logging
 import os
