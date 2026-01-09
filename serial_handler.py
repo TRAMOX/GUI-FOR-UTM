@@ -1,8 +1,3 @@
-"""
-Serial Handler - Manages Arduino communication via USB/Serial
-Handles connection, data transmission, and error recovery
-"""
-
 import serial
 import serial.tools.list_ports
 import threading
@@ -11,8 +6,6 @@ import logging
 import queue
 
 class SerialHandler:
-    """Handles serial communication with Arduino"""
-    
     def __init__(self):
         self.connection = None
         self.connected = False
@@ -37,7 +30,6 @@ class SerialHandler:
         self.data_callback = callback
     
     def set_connection_callback(self, callback):
-        """Set callback function for connection status changes"""
         self.connection_callback = callback
     
     def get_available_ports(self):
@@ -56,7 +48,6 @@ class SerialHandler:
             return []
     
     def connect(self, port, baudrate=9600):
-        """Connect to specified serial port"""
         try:
             if self.connected:
                 self.disconnect()
